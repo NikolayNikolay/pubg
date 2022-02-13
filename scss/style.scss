@@ -271,13 +271,6 @@ body{
       padding: 5px;
       cursor: pointer;
       transition: all 0.5s;
-      &:hover{
-         .drop__down{
-            visibility: visible;
-            height: 36px;
-            transition: all 0.5s;
-         }
-      }
    }
    .drop{
       display: flex;
@@ -311,6 +304,11 @@ body{
          width:20px;
       }
    }
+   .drop__down._active{
+      visibility: visible;
+      height: 36px;
+      transition: all 0.5s;
+   }
 }
 @media (min-width:600px){
    .header__user_language {
@@ -326,17 +324,17 @@ body{
       border-radius: 5px;
       cursor: pointer;
       transition: all 0.5s;
-      &:hover{
-         .drop__down{
-            visibility: visible;
-            height: 58px;
-            transition: all 0.5s;
-         }
-         .drop__arrow{
-            transform: rotate(180deg);
-            transition: all 0.5s;
-         }
-      }
+      // &:hover{
+      // //    .drop__down{
+      // //       visibility: visible;
+      // //       height: 58px;
+      // //       transition: all 0.5s;
+      // //    }
+      // //    .drop__arrow{
+      // //       transform: rotate(180deg);
+      // //       transition: all 0.5s;
+      // //    }
+      // // }
    }
 
    .drop{
@@ -353,9 +351,13 @@ body{
       margin-left: 14px;
       transition: all 0.5s;
    }
+   .drop__arrow._active{
+      transform: rotate(180deg);
+      transition: all 0.5s;
+   }
    ._language {
       text-align: center;
-      margin-left: 15px;
+      margin-left: 5px;
       color: $minBlack;
       font-weight: 700;
       font-size: 17px;
@@ -373,7 +375,13 @@ body{
       background: #FFFFFF;
       box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.05);
       border-radius: 5px;
-      padding-left: 10px;
+      padding-left: 17px;
+   }
+   
+   .drop__down._active{
+      visibility: visible;
+      height: 58px;
+      transition: all 0.5s;
    }
 }
 .header__user_block_acc {
@@ -722,6 +730,9 @@ body{
    .content__btn {
       flex-direction: column;
       align-items: center;
+   }
+   .content__link-utb {
+      width: 240px;
    }
    .content__link {
       margin: 0 0 17px 0;
@@ -1072,6 +1083,8 @@ main{
             line-height: 1.22;
             text-align: justify;
             color: $minBlack;
+            display: flex;
+            align-items: baseline;
             
             .cube{
                display: inline-block;
@@ -1080,6 +1093,9 @@ main{
                background: #FB8500;
                transform: rotate(-45deg);
                margin-right: 13px;
+            }
+            .list__description{
+               display: inline-block;
             }
             .black-text{
                font-family: 'Montserrat';
@@ -1503,6 +1519,8 @@ main{
             line-height: 1.25;
             text-align: justify;
             color: $minBlack;
+            display: flex;
+            align-items: baseline;
             .cube{
                display: inline-block;
                width: 8px;
@@ -1510,6 +1528,9 @@ main{
                background: #FB8500;
                transform: rotate(-45deg);
                margin-right: 13px;
+            }
+            .list__description{
+               display: inline-block;
             }
             .black-text{
                font-family: 'Montserrat';
